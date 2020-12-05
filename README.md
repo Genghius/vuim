@@ -24,9 +24,9 @@ The ultimate piece of garbage code.
 
 #### Installation:
 
-​	`git clone https://github.com/Genghius/vuim`
+`git clone https://github.com/Genghius/vuim`
 
-​	`cd vuim`
+`cd vuim`
 
-​	`make install`
+`make install`
 
