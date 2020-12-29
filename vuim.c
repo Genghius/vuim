@@ -1,19 +1,10 @@
 #include <stdlib.h>
 #include <curses.h>
 
-void insertM();
-void commandM();
+void commandM(void);
+void insertM(void);
 
-int main(){
-	initscr();
-	cbreak();
-	noecho();
-	keypad(stdscr, TRUE);
-	commandM();
-	return 0;
-}
-
-void insertM(){
+void insertM(void){
 	while(true){
 		int ch = getch();
 		int y, x;
@@ -61,7 +52,7 @@ void insertM(){
 	}
 }
 
-void commandM(){
+void commandM(void){
 	int ch;
 	int y, x;
 	char modifier = 'm'; // m for move, d for delete.
@@ -124,4 +115,12 @@ void commandM(){
 				exit(0);
 		}
 	}
+}
+
+int main(void){
+	initscr();
+	cbreak();
+	noecho();
+	keypad(stdscr, TRUE);
+	commandM();
 }
