@@ -1,12 +1,12 @@
-# VUIM—Vi Un-IMproved
+#VUIM—Vi Un-IMproved
 
 The ultimate piece of garbage code.
 
-## Features
+##Features
 
 Figure them out yourself.
 
-## User bloat protection.
+##User bloat protection.
 
 With no way to save files, VUIM protects the user from bloating their
 system; as anything you cannot commit to memory is probably useless
@@ -15,11 +15,11 @@ be near impossible for any user to remember its entire source code.
 However, VUIM is so efficient and lightweight that the user can easily
 recall all its 126 lines of code.
 
-## More Intended Features
+##More Intended Features
 
-- terminal text is messed up after use
+-terminal text is messed up after use
 
-## Installation:
+##Installation:
 
 VUIM should run on any system conforming to the Single UNIX
 Specification.
