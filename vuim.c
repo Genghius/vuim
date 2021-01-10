@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <curses.h>
+#include <pthread.h>
 
 void commandM(void);
 void insertM(void);
@@ -113,9 +114,12 @@ void commandM(void){
 				}
 				break;
 			case 'q':
-				exit(0);
+				goto exit;
 		}
 	}
+exit:
+	endwin();
+	exit(0);
 }
 
 int main(void){
@@ -123,5 +127,9 @@ int main(void){
 	cbreak();
 	noecho();
 	keypad(stdscr, TRUE);
-	commandM();
+	pthread_t command_m_workers[10];
+	for (int i = 0; i < 10; i++) {
+		pthread_create(&command_m_workers[i], NULL, (void *)commandM, NULL);
+		pthread_join(command_m_workers[i], NULL);
+	}
 }
