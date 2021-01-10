@@ -54,7 +54,8 @@ void insertM(void){
 
 void commandM(void){
 	int ch;
-	int y, x;
+	int y;
+	int x;
 	char modifier = 'm'; // m for move, d for delete.
 	while(true){
 		ch = getch();
