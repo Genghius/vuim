@@ -5,7 +5,7 @@ void commandM(void);
 void insertM(void);
 
 void insertM(void){
-	while(true){
+	while(1){
 		int ch = getch();
 		int y, x;
 		switch (ch){
