@@ -2,7 +2,7 @@
 
 PREFIX = /usr/local
 
-MYLIBS = ${LIBS} -l curses
+MYLIBS = ${LIBS} -l curses -l pthread
 MYCPPFLAGS = ${CPPFLAGS} -D _POSIX_C_SOURCE=200809L
 
 all: vuim
