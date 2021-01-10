@@ -13,11 +13,11 @@ system; as anything you cannot commit to memory is probably useless
 bloatware.  For example: Vim, this program is so bloated that it would
 be near impossible for any user to remember its entire source code.
 However, VUIM is so efficient and lightweight that the user can easily
-recall all its 126 lines of code.
+recall all its 135 lines of code.
 
 ##More Intended Features
 
--terminal text is messed up after use
+#Yes
 
 ##Installation:
 
