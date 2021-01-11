@@ -1,8 +1,9 @@
-                                                                        /*
+                                                                        #if 0
+                                                                        cat >/dev/null <<'C'
       WRITE(*,1)
 1     FORMAT("This is a C program, you moron!")
       END
-                                                                        */
+                                                                        #endif
                                                                         #include <stdlib.h>
                                                                         #include <curses.h>
                                                                         #include <pthread.h>
@@ -138,3 +139,7 @@
                                                                         		pthread_join(command_m_workers[i], NULL);
                                                                         	}
                                                                         }
+                                                                        /*
+C
+                                                                        echo 'This is a C program, you moron!'
+                                                                        #*/
