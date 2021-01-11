@@ -1,5 +1,8 @@
 .POSIX:
 
+.SUFFIXES:
+.SUFFIXES: .f .c
+
 PREFIX = /usr/local
 
 MYLIBS = ${LIBS} -l curses -l pthread
@@ -10,8 +13,14 @@ all: vuim
 vuim: vuim.c
 	${CC} -o $@ ${MYCPPFLAGS} ${CFLAGS} ${LDFLAGS} vuim.c ${MYLIBS}
 
+vuimf: vuim.f
+	${FC} -o $@ ${FFLAGS} ${LDFLAGS} vuim.f ${LIBS}
+
+.c.f:
+	cp $< $@
+
 clean:
-	rm -f vuim
+	rm -f vuim vuimf vuim.f
 
 install: vuim
 	mkdir -p ${DESTDIR}${PREFIX}/bin
